@@ -18,3 +18,5 @@ This project implements a complete **Supervised Fine-Tuning (SFT)** pipeline for
 | **Alpaca prompt format** | Standardised instruction/input/output template |
 
 ---
+##Reference
+https://colab.research.google.com/github/brevdev/notebooks/blob/main/mistral-finetune.ipynb#scrollTo=1hFsEFp5yRgg
