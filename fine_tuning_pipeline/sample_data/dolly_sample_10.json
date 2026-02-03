@@ -1,0 +1,52 @@
+[
+  {
+    "instruction": "Explain the concept of transfer learning in machine learning.",
+    "input": "",
+    "output": "Transfer learning is a technique where a model trained on one task is reused as the starting point for a model on a second task. Instead of training a neural network from scratch, which requires massive datasets and compute, transfer learning lets you fine-tune an already-trained model on your specific domain. This dramatically reduces training time and data requirements while often achieving better performance."
+  },
+  {
+    "instruction": "Write a Python function that checks if a number is prime.",
+    "input": "",
+    "output": "def is_prime(n):\n    if n < 2:\n        return False\n    for i in range(2, int(n**0.5) + 1):\n        if n % i == 0:\n            return False\n    return True\n\n# Example usage\nprint(is_prime(17))  # True\nprint(is_prime(4))   # False"
+  },
+  {
+    "instruction": "Summarise the key differences between supervised and unsupervised learning.",
+    "input": "",
+    "output": "Supervised learning uses labelled training data — the model learns a mapping from inputs to known outputs. Examples include classification and regression. Unsupervised learning works with unlabelled data and tries to find hidden patterns or structures, such as clustering or dimensionality reduction. The core difference is whether ground-truth labels guide the learning process."
+  },
+  {
+    "instruction": "What is the role of a learning rate in model training?",
+    "input": "Context: Neural network optimisation basics",
+    "output": "The learning rate controls how large the weight updates are during training. A high learning rate causes big jumps in the loss landscape and may overshoot the optimum, leading to instability. A low learning rate moves cautiously but may converge very slowly or get stuck in local minima. Common practice is to start with a moderate rate (e.g. 1e-3) and use a scheduler to decay it over epochs."
+  },
+  {
+    "instruction": "Describe what LoRA (Low-Rank Adaptation) does and why it is popular.",
+    "input": "",
+    "output": "LoRA adds small trainable rank-decomposition matrices to the existing frozen weight matrices of a large model. During fine-tuning, only these low-rank matrices are updated, drastically cutting the number of trainable parameters — sometimes by 99% or more. This makes fine-tuning large language models feasible on consumer-grade GPUs while retaining most of the pre-trained model's knowledge."
+  },
+  {
+    "instruction": "Generate a short product description for a wireless noise-cancelling headphone.",
+    "input": "Brand: SoundWave  Model: NQ-200  Price: $149",
+    "output": "Introducing the SoundWave NQ-200 — your escape from distractions. Featuring advanced active noise cancellation, 30-hour battery life, and ultra-comfortable over-ear cushions, the NQ-200 delivers crystal-clear audio whether you're commuting or coding. At just $149, it's the smartest upgrade for your listening experience."
+  },
+  {
+    "instruction": "Explain the difference between precision and recall in classification models.",
+    "input": "",
+    "output": "Precision measures the proportion of predicted positives that are actually positive (TP / (TP + FP)). Recall measures the proportion of actual positives that the model correctly identified (TP / (TP + FN)). A high-precision model is cautious — it rarely gives false alarms. A high-recall model is thorough — it catches most true positives but may flag some false ones. The F1 score is the harmonic mean of both."
+  },
+  {
+    "instruction": "Rewrite the following sentence to be more concise.",
+    "input": "The utilisation of advanced computational methodologies in the field of natural language processing has led to significant improvements in the overall performance of text-based systems.",
+    "output": "Advanced NLP techniques have significantly improved text-based system performance."
+  },
+  {
+    "instruction": "What are the three main stages of a typical LLM training pipeline?",
+    "input": "",
+    "output": "The three main stages are: (1) Pre-training — the model learns general language patterns from a massive corpus of text using next-token prediction. (2) Supervised Fine-Tuning (SFT) — the model is trained on curated instruction-response pairs to follow instructions. (3) Reinforcement Learning from Human Feedback (RLHF) — human preferences are used to further align the model's outputs with desired behaviour."
+  },
+  {
+    "instruction": "Explain what gradient accumulation is and when you would use it.",
+    "input": "",
+    "output": "Gradient accumulation lets you simulate a larger batch size without actually loading a large batch into GPU memory. Instead of updating weights after every mini-batch, you sum the gradients over several steps and update once. For example, with batch size 2 and accumulation steps 8, the effective batch size becomes 16. This is essential when training large models on GPUs with limited VRAM."
+  }
+]

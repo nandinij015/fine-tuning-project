@@ -1,0 +1,29 @@
+# ═══════════════════════════════════════════════════════════
+# requirements.txt
+# Install:   pip install -r requirements.txt
+# Tested on: Python 3.10 / 3.11
+# ═══════════════════════════════════════════════════════════
+
+# ── Core ML framework ─────────────────────────────────────
+torch>=2.1.0
+
+# ── HuggingFace ecosystem ─────────────────────────────────
+transformers>=4.36.0
+datasets>=2.16.0
+accelerate>=0.25.0
+tokenizers>=0.15.0
+
+# ── Parameter-Efficient Fine-Tuning (LoRA / QLoRA) ───────
+peft>=0.7.0
+bitsandbytes>=0.41.0
+
+# ── Supervised Fine-Tuning trainer ────────────────────────
+trl>=0.6.0
+
+# ── Utilities ─────────────────────────────────────────────
+numpy>=1.24.0
+scikit-learn>=1.3.0
+
+# ── Monitoring (optional — set report_to in config.py) ───
+tensorboard>=2.15.0
+# wandb>=0.16.0          # uncomment if using Weights & Biases

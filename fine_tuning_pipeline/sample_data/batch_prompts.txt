@@ -1,0 +1,5 @@
+Explain the concept of transfer learning in machine learning.
+What is the role of a learning rate in model training?
+Describe what LoRA (Low-Rank Adaptation) does and why it is popular.
+What are the three main stages of a typical LLM training pipeline?
+Explain what gradient accumulation is and when you would use it.
