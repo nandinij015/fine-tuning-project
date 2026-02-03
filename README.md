@@ -12,7 +12,7 @@ This project implements a complete **Supervised Fine-Tuning (SFT)** pipeline for
 
 | Technique | Purpose |
 |---|---|
-| **QLoRA** (4-bit quantisation + LoRA) | Train a 12-24 B model on a single consumer GPU |
+| **QLoRA** (4-bit quantisation + LoRA) | Train a 7 B model on a single consumer GPU |
 | **LoRA** (Low-Rank Adaptation) | Update < 0.2 % of parameters — preserves pre-trained knowledge |
 | **SFT** (Supervised Fine-Tuning) | Train on curated instruction → response pairs |
 | **Alpaca prompt format** | Standardised instruction/input/output template |
