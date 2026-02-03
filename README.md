@@ -23,3 +23,5 @@ This project implements a complete **Supervised Fine-Tuning (SFT)** pipeline for
 2. https://medium.com/@codersama/fine-tuning-mistral-7b-in-google-colab-with-qlora-complete-guide-60e12d437cca
 3. https://huggingface.co/mistralai/Mistral-7B-v0.1/discussions/133
 4. https://github.com/krishnaik06/Finetuning-LLM/tree/main
+5. https://www.youtube.com/watch?v=qcjrduz_YS8
+6. https://www.youtube.com/watch?v=UWo9r6flDjk
