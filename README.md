@@ -18,5 +18,8 @@ This project implements a complete **Supervised Fine-Tuning (SFT)** pipeline for
 | **Alpaca prompt format** | Standardised instruction/input/output template |
 
 ---
-## Reference
-https://colab.research.google.com/github/brevdev/notebooks/blob/main/mistral-finetune.ipynb#scrollTo=1hFsEFp5yRgg
+## References
+1. https://colab.research.google.com/github/brevdev/notebooks/blob/main/mistral-finetune.ipynb#scrollTo=1hFsEFp5yRgg
+2. https://medium.com/@codersama/fine-tuning-mistral-7b-in-google-colab-with-qlora-complete-guide-60e12d437cca
+3. https://huggingface.co/mistralai/Mistral-7B-v0.1/discussions/133
+4. https://github.com/krishnaik06/Finetuning-LLM/tree/main
