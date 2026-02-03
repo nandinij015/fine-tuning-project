@@ -1,33 +1,3 @@
-"""
-prepare_data.py
-═══════════════════════════════════════════════════════════════
- Stage 1 / 4 — Data Ingestion & Pre-Processing
-═══════════════════════════════════════════════════════════════
-
- Responsibilities
- ─────────────────
- 1. Load the dataset (10-row sample  OR  full 15 k from HuggingFace).
- 2. Validate every row — drop rows missing instruction or output.
- 3. Format each row into the Alpaca prompt template.
- 4. Split into train / validation sets (default 90 / 10).
- 5. Write clean JSON files to sample_data/.
-
- Pipeline position
- ─────────────────
- Your workflow:  INPUT LAYER  →  PRE-PROCESSING  →  …
-
- Usage
- ─────
-     python prepare_data.py                # uses sample (10 rows)
-     python prepare_data.py --full         # downloads full 15 k dataset
-
- Outputs
- ───────
-     sample_data/train.json
-     sample_data/val.json
-
-═══════════════════════════════════════════════════════════════
-"""
 
 import argparse
 import json
@@ -122,6 +92,18 @@ def validate_row(row: dict, idx: int) -> bool:
     if not output:
         log.warning("Row %d skipped — empty 'output'", idx)
         return False
+    return True
+
+
+ def validate_token_length(row: dict, tokenizer, max_len: int) -> bool:
+    """Return False if sample exceeds max length after tokenization."""
+    tokens = tokenizer(row["text"], truncation=False)
+    if len(tokens["input_ids"]) > max_len:
+        log.warning(
+            "Sample exceeds max_len=%d (actual=%d) - will be truncated",
+            max_len, len(tokens["input_ids"])
+        )
+        return False  # or True if you want to keep it
     return True
 
 
