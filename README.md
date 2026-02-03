@@ -1,7 +1,7 @@
 # Fine-Tuning Pipeline — Mistral + Gemma (QLoRA / SFT)
 
-> **End-to-end supervised fine-tuning of Mistral using LoRA on the Databricks Dolly 15k dataset.  
-> Designed to run on a single GPU with minimal VRAM via 4-bit quantisation (QLoRA).**
+> End-to-end supervised fine-tuning of Mistral using LoRA on the Databricks Dolly 15k dataset.  
+> Designed to run on a single GPU with minimal VRAM via 4-bit quantisation (QLoRA).
 
 
 ## 1. Project Overview
