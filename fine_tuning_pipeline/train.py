@@ -205,7 +205,7 @@ def tokenize(dataset: Dataset, tokenizer: AutoTokenizer) -> Dataset:
             batch["text"],
             truncation = True,
             max_length = max_len,
-            padding    = "max_length",
+            padding    = "longest",
         )
 
     tokenised = dataset.map(_tok, batched=True, remove_columns=dataset.column_names)
